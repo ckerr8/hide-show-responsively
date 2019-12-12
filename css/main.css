@@ -1,0 +1,73 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.dino-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dino:nth-child(2) {
+  display: none;
+}
+
+.dino:last-child {
+  display: none;
+}
+
+@media only screen and (min-width: 25em) {
+
+  .dino:nth-child(2) {
+    display: block;
+  }
+
+  .dino:last-child {
+    display: block;
+  }
+
+  .dino {
+    width: 50%;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  .dino:first-child {
+    display: none;
+  }
+
+  .dino {
+    width: 33.333%;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .dino:first-child {
+    display: block;
+  }
+
+  .dino {
+    width: 25%;
+  }
